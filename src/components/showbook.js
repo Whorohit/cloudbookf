@@ -1,25 +1,21 @@
-import React,{ useState, useEffect } from 'react'
+import React,
+{ useState, useEffect } from 'react'
 import photo from './bookphoto.jpeg'
 import axios from 'axios'
 import {
     Link
 } from "react-router-dom";
-
-export default function Showbook(prop) {
+export default function Showbook() {
     const [booklist, setBooklist] = useState([])
     useEffect(() => {
-        axios.get("http://localhost:90/")
+        axios.get("https://cloudbookapp.onrender.com/")
             .then(res => setBooklist(res.data))
 
     }, [])
     const handleondelete = (id) => {
-        axios.post("http://localhost:90/delete", { id })
+        axios.post("https://cloudbookapp.onrender.com/delete", { id })
             .then(res => setBooklist(res.data))
 
-    }
-    const change=(id)=>{
-        prop.setbookid(
-            id)
     }
 
     return (
@@ -41,7 +37,7 @@ export default function Showbook(prop) {
                                 </div>
                                 <h4 className='h6 text-start'>ISBN Number: {list.isbn}</h4>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <Link to="/id" class="btn btn-primary" onClick={()=>change(list._id)} >Read More</Link>
+                                <Link to="/id" class="btn btn-primary"  >Read More</Link>
                             </div>
                         </div>
                     })}

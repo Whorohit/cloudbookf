@@ -31,7 +31,7 @@ export default function Addbook() {
                 year:document.getElementsByName('year').value,
                 isbn:document.getElementsByName('isbn').value
             })
-           axios.post("http://localhost:90/addbook",bookobj)
+           axios.post("https://cloudbookapp.onrender.com/addbook",bookobj)
         }
     }
 
