@@ -55,7 +55,7 @@ export default function Addbook() {
                     <input type='number' class="form-control" id="formGroupExampleInput"  autoComplete='off'  name='isbn'  placeholder="ISBN Number" defaultValue={bookobj.isbn}  onChange={handleonchange}/>
                 </div>
                 <div className="container d-flex justify-content-center">
-                <button type="submit" class="btn btn-dark" onClick={Add}><Link to='https://cloudbookapp.onrender.com/' className='text-decoration-none text-light'>Submit</Link></button>
+                <button type="submit" class="btn btn-dark" onClick={Add}><Link to='/' className='text-decoration-none text-light'>Submit</Link></button>
                 </div>
             </form>
         </>

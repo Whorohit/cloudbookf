@@ -37,7 +37,7 @@ export default function Showbook() {
                                 </div>
                                 <h4 className='h6 text-start'>ISBN Number: {list.isbn}</h4>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <Link to="https://cloudbookapp.onrender.com/" class="btn btn-primary"  >Read More</Link>
+                                <Link to="/" class="btn btn-primary"  >Read More</Link>
                             </div>
                         </div>
                     })}
