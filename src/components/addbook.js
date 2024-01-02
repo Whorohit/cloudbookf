@@ -11,7 +11,8 @@ export default function Addbook() {
         title:"",
         author:"",
         year:12,
-        isbn:13
+        isbn:13,
+        desc:""
     })
     const  handleonchange=(e)=>{
         const {name,value}=e.target
@@ -29,7 +30,8 @@ export default function Addbook() {
                 title:document.getElementsByName('title').value,
                 author:document.getElementsByName('author').value,
                 year:document.getElementsByName('year').value,
-                isbn:document.getElementsByName('isbn').value
+                isbn:document.getElementsByName('isbn').value,
+                desc:document.getElementsByName('desc').value
             })
            axios.post("https://cloudbookapp.onrender.com/addbook",bookobj)
         }
@@ -53,6 +55,10 @@ export default function Addbook() {
                 <div class="mb-3">
                     <label for="formGroupExampleInput2" class="form-label">Enter the ISBN Number</label>
                     <input type='number' class="form-control" id="formGroupExampleInput"  autoComplete='off'  name='isbn'  placeholder="ISBN Number" defaultValue={bookobj.isbn}  onChange={handleonchange}/>
+                </div>
+                <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label">Enter the Description</label>
+                    <input type='text' class="form-control" id="formGroupExampleInput"  autoComplete='off'  name='desc'  placeholder="ISBN Number" defaultValue={bookobj.isbn}  onChange={handleonchange}/>
                 </div>
                 <div className="container d-flex justify-content-center">
                 <button type="submit" class="btn btn-dark" onClick={Add}><Link to='/' className='text-decoration-none text-light'>Submit</Link></button>

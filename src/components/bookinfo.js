@@ -11,7 +11,7 @@ export default function Bookinfo(prop) {
         axios.get("http://localhost:90/id", { id })
             .then(res => setInfo(res.data))
 
-    }, [])
+    }, [ ])
 
     return (
         <div className="conatiner w-75 my-4 mx-auto" style={{ fontFamily: "Barlow" }}>
@@ -23,7 +23,7 @@ export default function Bookinfo(prop) {
                 <h3 className="h4">By {info.author}</h3>
             </div>
             <div className="conatiner text-center">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores vero quia corrupti magni magnam, ad error fugiat dolorum quis consequatur quae earum alias quidem, quibusdam ipsum explicabo nihil, soluta cum.
+               
             </div>
         </div>
     )

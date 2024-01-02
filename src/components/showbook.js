@@ -36,7 +36,7 @@ export default function Showbook() {
                                     <h4 className='h6'>By {list.author}</h4>
                                 </div>
                                 <h4 className='h6 text-start'>ISBN Number: {list.isbn}</h4>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <p class="card-text"></p>
                                 <Link to="/" class="btn btn-primary"  >Read More</Link>
                             </div>
                         </div>
