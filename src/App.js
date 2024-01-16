@@ -11,6 +11,7 @@ import {
   Routes,
   Link
 } from "react-router-dom";
+import Viewbook from './Viewbook';
 
 function App() {
   const [bookid, setBookid] = useState("")
@@ -21,6 +22,7 @@ function App() {
       <Routes>
         <Route exact path='/add' element={<Addbook/>} ></Route>
         <Route exact path='/' element={<Showbook/>} ></Route>
+        <Route exact path='/view/:id' element={<Viewbook/>} ></Route>
       </Routes>
 
     </Router>
